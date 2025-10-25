@@ -4,25 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de voluntários</title>
-</head>
+    <link rel="stylesheet" href="style.css">
+</header>
 <body>
-    <header>
-        <h1>Cadastro de Voluntários</h1>
-        <nav>
-            <ul>
-            <li><a href="index.html"></a>Indice</li>
-            <li><a href="projeto.html"></a>Projeto</li>
-            <li><a href="cadastro.html"></a>Cadastro</li>
-            </ul>
-        </nav>
-    </header>
+    <nav>
+
+        <button class="menu-toggle" onclick="toggleMenu()"></button>
         
+    <ul>
+
+        <li><a href="index.html">Início</a></li>
+        <li><a href="projeto.html">Projeto de Voluntáriado</a></li>
+        <li><a href="cadastro.html">Cadastro de Voluntáriado</a></li>
+    </ul>
+</nav>
+        
+    <h1>Junte-se a Nós como Voluntário!</h1>
+        <h3>Aqui você encontra formas concretas de ajudar, seja dedicando seu tempo, habilidades ou recursos. Cada gesto de solidariedade transforma vidas e fortalece comunidades.</h3>
+        
+    </header>
+        </section>
+</div>
 </body>
 </html>
     <main>
         <section>
-            <h2> Formulário de Cadastro de Voluntários</h2>
-            <form>
+
+              <form>
                 <fieldset>
                     <legend>Informações Pessoais</legend>
                     <label for="nome">Nome Completo:</label>
@@ -41,6 +49,14 @@
                         <option value="meio-ambiente">Meio Ambiente</option>
                         <option value="outros">Outros</option>
                     </select><br><br>
+                    <button type="submit">Enviar Cadastro</button>
+                    </div>
+                    <script>
+                    document.querySelector('form').addEventListener('submit', function(event) {
+                     event.preventDefault();
+                    alert('Cadastro enviado com sucesso! Obrigado por se voluntariar.'); });
+                    </script>
+              
             </form>
         </section>
     </main>
