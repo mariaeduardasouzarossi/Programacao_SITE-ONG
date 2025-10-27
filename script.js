@@ -1,29 +1,12 @@
-@WebServlet("/cadastro")
-public class CadastroServlet extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+const depoimentos = [
+  "Foi uma das melhores experiências da minha vida participar deste projeto!",
+  "A ONG me permitiu ajudar o próximo e aprender muito.",
+  "Conheci pessoas incríveis e pude fazer a diferença.",
+  "Trabalhar como voluntário me trouxe satisfação e felicidade."
+];
+let atual = 0;
 
-        // Recebendo os parâmetros do formulário
-        String nome = request.getParameter("nome");
-        String email = request.getParameter("email");
-        String cpf = request.getParameter("cpf");
-        String telefone = request.getParameter("telefone");
-        String nascimento = request.getParameter("nascimento");
-
-        // Aqui você pode salvar esses dados no banco de dados
-
-        // Configurar a resposta
-        response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
-
-        // Resposta simples para confirmar recebimento
-        out.println("<html><body>");
-        out.println("<h2>Cadastro recebido com sucesso!</h2>");
-        out.println("<p>Nome: " + nome + "</p>");
-        out.println("<p>Email: " + email + "</p>");
-        out.println("<p>CPF: " + cpf + "</p>");
-        out.println("<p>Telefone: " + telefone + "</p>");
-        out.println("<p>Data de Nascimento: " + nascimento + "</p>");
-        out.println("</body></html>");
-    }
-}
+document.getElementById('proximoDepoimento').addEventListener('click', function() {
+  atual = (atual + 1) % depoimentos.length;
+  document.getElementById('depoimento').textContent = depoimentos[atual];
+});
