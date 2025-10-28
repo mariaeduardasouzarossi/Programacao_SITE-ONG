@@ -166,3 +166,28 @@ fieldset {
 .menu-topo a:hover {
   color: #325c9b;
 }
+.menu-topo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  padding: 18px 0;
+  flex-wrap: wrap; /* importante para mobile */
+  list-style: none;
+  margin: 0;
+}
+.menu-topo li {
+  font-size: var(--font-lg, 1.2em);
+  font-weight: bold;
+}
+.menu-topo a {
+  color: #222;
+  text-decoration: none;
+}
+@media (max-width: 600px) {
+  .menu-topo {
+    flex-direction: column;
+    gap: 8px;
+    padding: 14px 0;
+  }
+}
