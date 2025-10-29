@@ -1,63 +1,46 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de voluntários</title>
+<header class="topo">
+  <div class="logo-area">
+    <img src="logo.png" class="logo" alt="Logo Projeto Viva ONG">
+    <span>Projeto Viva ONG</span>
     <link rel="stylesheet" href="style.css">
+  </div>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="projeto.html">Projeto</a>
+    <a href="cadastro.html" class="btn-nav">Junte-se</a>
+  </nav>
 </header>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro - Projeto Viva ONG</title>
+</head>
 <body>
-    <header>
-    <script src="script.js">
-</script>
-    <nav>
-        
-    <ul>
-
-        <li><a href="index.html">Início</a></li>
-        <li><a href="projeto.html">Projeto de Voluntáriado</a></li>
-        <li><a href="cadastro.html">Cadastro de Voluntáriado</a></li>
-    </ul>
-</nav>
-        
-    <h1>Junte-se a Nós como Voluntário!</h1>
-        <h3>Aqui você encontra formas concretas de ajudar, seja dedicando seu tempo, habilidades ou recursos. Cada gesto de solidariedade transforma vidas e fortalece comunidades.</h3>
-        
-    </header>
-        </section>
-</div>
+  <main>
+    <div class="cadastro-container">
+      <div class="cadastro-banner">
+        <img src="logo-nome.png" class="logo-banner">
+        <h2>Junte-se ao Projeto Viva ONG</h2>
+        <p>Contribua para transformar vidas e o futuro da sua comunidade!</p>
+      </div>
+      <form class="cadastro-form">
+        <input type="text" placeholder="Nome" required>
+        <input type="text" placeholder="Sobrenome" required>
+        <input type="email" placeholder="E-mail" required>
+        <input type="text" placeholder="CPF" required>
+        <input type="text" placeholder="Telefone" required>
+        <input type="date" placeholder="Data de Nascimento" required>
+        <h3>Endereço</h3>
+        <input type="text" placeholder="Endereço completo" required>
+        <input type="text" placeholder="CEP" required>
+        <input type="text" placeholder="Cidade" required>
+        <input type="text" placeholder="Estado" required>
+        <label>Interesses e experiências</label>
+        <textarea placeholder="Descreva como pode colaborar, habilidades, horários, etc."></textarea>
+        <button class="btn" type="submit">Enviar Cadastro</button>
+      </form>
+    </div>
+  </main>
 </body>
 </html>
-    <main>
-        <section>
-
-              <form>
-                <fieldset>
-                    <legend>Informações Pessoais</legend>
-                    <label for="nome">Nome Completo:</label>
-                    <input type="text" id="nome" name="nome" required><br><br>
-
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required><br><br>
-
-                    <label for="telefone">Telefone:</label>
-                    <input type="tel" id="telefone" name="telefone" required><br><br>
-
-                    <label for="interesse">Área de Interesse:</label>
-                    <select id="interesse" name="interesse">
-                        <option value="educacao">Educação</option>
-                        <option value="saude">Saúde</option>
-                        <option value="meio-ambiente">Meio Ambiente</option>
-                        <option value="outros">Outros</option>
-                    </select><br><br>
-                    <button type="submit">Enviar Cadastro</button>
-                    </div>
-                    <script>
-                    document.querySelector('form').addEventListener('submit', function(event) {
-                     event.preventDefault();
-                    alert('Cadastro enviado com sucesso! Obrigado por se voluntariar.'); });
-                    </script>
-              
-            </form>
-        </section>
-    </main>

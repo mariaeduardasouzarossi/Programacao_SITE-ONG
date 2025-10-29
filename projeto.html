@@ -1,151 +1,56 @@
+<header class="topo">
+  <div class="logo-area">
+    <img src="logo.png" class="logo" alt="Logo Projeto Viva ONG">
+    <span>Projeto Viva ONG</span>
+    <link rel="stylesheet" href="style.css">
+  </div>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="projeto.html">Projeto</a>
+    <a href="cadastro.html" class="btn-nav">Junte-se</a>
+  </nav>
+</header>
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Viva ONG</title>
-     <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Projeto Viva ONG - Projetos</title>
 </head>
 <body>
-    <nav>
-    <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="projeto.html">Projeto de Voluntáriado</a></li>
-        <li><a href="cadastro.html">Cadastro de Voluntáriado</a></li>
-    </ul>
-</nav>
-    <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <section class="painel-depoimento">
-  <h2>Depoimentos de Voluntários</h2>
-  <p id="depoimento">Clique no botão para ver um depoimento!</p>
-  <button id="proximoDepoimento">Próximo Depoimento</button>
-  <section class="painel-depoimento"></section>
-</section>
-    <meta charset="UTF-8">
-    <title>Projetos de Voluntariado</title>
-    <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <title>Ideias para Projetos de Voluntariado</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #eef4fa;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 900px;
-            margin: 40px auto 0 auto;
-            padding: 20px;
-        }
-        h1 {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        .card {
-            background: #fff;
-            border-radius: 10px;
-            margin-bottom: 30px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-            padding: 24px 28px;
-        }
-        .card-title {
-            color: #000000;
-            font-size: 1.4em;
-            font-weight: bold;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-        .description {
-            font-size: 1.05em;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-        .proj-list {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
-            margin-top: 18px;
-        }
-        .proj-item {
-            background: #f1f7fd;
-            padding: 10px 18px;
-            border-radius: 7px;
-            min-width: 170px;
-            margin-bottom: 10px;
-            text-align: center
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Ideias para Projetos de Voluntariado</h1>
+   <main>
+  <h2 class="titulo-projeto">Principais Projetos</h2>
+  <div class="filtro-projetos">
+    <button data-filter="all" class="active">Todos</button>
+    <button data-filter="social">Social</button>
+    <button data-filter="ambiental">Ambiental</button>
+  </div>
 
-        <div class="card">
-            <div class="card-title">Educação e Capacitação</div>
-            <div class="description">
-                Ofereça aulas de reforço, informática e idiomas para crianças e adultos.
-            </div>
-            <div class="proj-list">
-                <div class="proj-item">Aulas presenciais e online</div>
-                <div class="proj-item">Oficinas de escrita criativa</div>
-                <div class="proj-item">Apoio para vestibular e ENEM</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-title">Campanhas Solidárias</div>
-            <div class="description">
-                Organize arrecadação e distribuição de alimentos, roupas e brinquedos.
-            </div>
-            <div class="proj-list">
-                <div class="proj-item">Mutirões de montagem de cestas básicas</div>
-                <div class="proj-item">Entrega para famílias em vulnerabilidade</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-title">Apoio a Abrigos e Lares</div>
-            <div class="description">
-                Promova visitas a abrigos de crianças, idosos ou casas de acolhimento, oferecendo atividades e companhia.
-            </div>
-            <div class="proj-list">
-                <div class="proj-item">Visitas e recreação</div>
-                <div class="proj-item">Rodas de conversa</div>
-                <div class="proj-item">Oficinas artísticas</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-title">Meio Ambiente</div>
-            <div class="description">
-                Realize ações de plantio de árvores, limpeza de praças e campanhas de conscientização.
-            </div>
-            <div class="proj-list">
-                <div class="proj-item">Mutirões de limpeza</div>
-                <div class="proj-item">Plantio de mudas</div>
-                <div class="proj-item">Educação ambiental</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-title">Voluntariado Digital</div>
-            <div class="description">
-                Crie iniciativas online como mentorias, aulas virtuais e campanhas de divulgação.
-            </div>
-            <div class="proj-list">
-                <div class="proj-item">Mentorias online</div>
-                <div class="proj-item">Apoio emocional virtual</div>
-                <div class="proj-item">Campanhas em redes sociais</div>
-            </div>
-        </div>
+  <section class="card-grid">
+    <div class="card-flip" data-category="social">
+      <div class="card-front">
+        <span class="projeto-icone">🦷</span>
+        <h3>Refazer Sorrisos</h3>
+        <p>Atendimento odontológico voluntário para famílias carentes.</p>
+        <span class="projeto-status andamento">Em andamento</span>
+      </div>
+      <div class="card-back">
+        <h4>Detalhes</h4>
+        <p>Consultas mensais, doação de kits de higiene dental, relatos emocionantes dos beneficiados.</p>
+        <a href="#" class="btn-card">Saiba mais</a>
+      </div>
     </div>
-    <script src="script.js"></script>
-</body>
-</html>
-    
+    <div class="card-flip" data-category="ambiental">
+      <div class="card-front">
+        <span class="projeto-icone">🌳</span>
+        <h3>Paisagismo Solidário</h3>
+        <p>Plantio de árvores e limpeza de canteiros públicos com voluntários.</p>
+        <span class="projeto-status concluido">Concluído</span>
+      </div>
+      <div class="card-back">
+        <h4>Detalhes</h4>
+        <p>Mais de 150 mudas plantadas e recuperação de praças em setembro.</p>
+        <a href="#" class="btn-card">Fotos do projeto</a>
+      </div>
+    </div>
+  </section>
+</main>
