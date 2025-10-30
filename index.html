@@ -1,79 +1,24 @@
-<header class="topo">
-  <div class="logo-area">
-    <img src="logo.png" class="logo" alt="Logo Projeto Viva ONG">
-    <span>Projeto Viva ONG</span>
-  </div>
-  <nav>
-    <a href="index.html">Início</a>
-    <a href="projeto.html">Projeto</a>
-    <a href="cadastro.html" class="btn-nav">Junte-se</a>
-  </nav>
-</header>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <title>Projeto Viva ONG - Início</title>
   <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
-  <main>
-    <section class="banner-home">
-      <h1>Transformando vidas, preservando o futuro.</h1>
-      <p>Conheça o Projeto Viva ONG e junte-se à nossa missão!</p>
-    </section>
-    <section class="depoimentos">
-      <h2>Depoimentos</h2>
-      <div class="depoimentos-list">
-        <blockquote>"O Viva ONG me ajudou a crescer e mudar o mundo." <span>- Aline Souza</span></blockquote>
-        <blockquote>"A melhor experiência de voluntariado que já tive!" <span>- Carlos Lima</span></blockquote>
-      </div>
-    </section>
-    <section class="noticias">
-      <h2>Notícias</h2>
-      <div class="card-list">
-        <div class="card">
-          <h3>Campanha do Agasalho: Sucesso!</h3>
-          <p>Arrecadamos mais de 600 peças em nossa ação de julho.</p>
-        </div>
-        <div class="card">
-          <h3>Nova Horta Comunitária</h3>
-          <p>Inaugurada nossa primeira horta com ajuda de voluntários.</p>
-        </div>
-      </div>
-      </div>
-    </section>
-  </main>
-  <script src="script.js"></script>
-  <main>
-  <section class="banner-home">
-    <h1>Transformando vidas, preservando o futuro.</h1>
-    <p>Conheça o Projeto Viva ONG e <a href="cadastro.html" class="banner-btn">junte-se à missão!</a></p>
-  </section>
-
-  <section>
-  <section class="noticias">
-    <h2>Notícias</h2>
-    <div class="card-list">
-      <div class="card">
-        <span class="noticia-icone">🌟</span>
-        <h3>Campanha do Agasalho: Sucesso!</h3>
-        <p>Arrecadamos mais de 600 peças em nossa ação de julho.</p>
-      </div>
-      <div class="card">
-        <span class="noticia-icone">🌱</span>
-        <h3>Nova Horta Comunitária</h3>
-        <p>Inaugurada nossa primeira horta com ajuda de voluntários.</p>
-      </div>
+  <header class="topo">
+    <div class="logo-area">
+      <img src="logo.png" class="logo" alt="Logo Projeto Viva ONG">
+      <span>Projeto Viva ONG</span>
     </div>
-  </section>
-
-  <section class="chamada-voluntario">
-    <h2>Seja um voluntário</h2>
-    <p>Participe, traga suas ideias e habilidades e faça parte deste movimento de transformação!</p>
-    <a href="cadastro.html" class="btn-voluntario">Quero ser voluntário</a>
-  </section>
-</main>
-
+    <nav>
+      <a href="#" data-page="inicio">Início</a>
+      <a href="#" data-page="projeto">Projeto</a>
+      <a href="#" data-page="cadastro" class="btn-nav">Junte-se</a>
+    </nav>
+  </header>
+  <main id="app"></main>
+  <script type="module" src="js/app.js"></script>
 </body>
 </html>
