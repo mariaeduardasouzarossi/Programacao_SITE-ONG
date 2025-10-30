@@ -1,24 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Projeto Viva ONG - Início</title>
-  <link rel="stylesheet" href="style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="topo">
+  <header class="topo" role="banner">
     <div class="logo-area">
-      <img src="logo.png" class="logo" alt="Logo Projeto Viva ONG">
-      <span>Projeto Viva ONG</span>
+      <img src="logo.png" class="logo" alt="Logo Projeto Viva ONG" />
+      <span id="nome-ong">Projeto Viva ONG</span>
     </div>
-    <nav>
-      <a href="#" data-page="inicio">Início</a>
-      <a href="#" data-page="projeto">Projeto</a>
-      <a href="#" data-page="cadastro" class="btn-nav">Junte-se</a>
+    <nav aria-label="Menu principal">
+      <a href="#" data-page="inicio" tabindex="0">Início</a>
+      <a href="#" data-page="projeto" tabindex="0">Projeto</a>
+      <a href="#" data-page="cadastro" class="btn-nav" tabindex="0">Junte-se</a>
+      <button id="btn-contraste" aria-pressed="false" aria-label="Ativar alto contraste" tabindex="0">Alto Contraste</button>
+      <button id="btn-dark" aria-pressed="false" aria-label="Ativar modo escuro" tabindex="0">Modo Escuro</button>
     </nav>
   </header>
-  <main id="app"></main>
+  <main id="app" tabindex="0"></main>
+  <footer role="contentinfo">
+    <p>© Projeto Viva ONG. Acessível e otimizado. WCAG 2.1 level AA.</p>
+  </footer>
   <script type="module" src="js/app.js"></script>
+  <script>
+    document.getElementById('btn-contraste').onclick = function(){
+      document.body.classList.toggle('contraste-alto');
+      this.setAttribute('aria-pressed', document.body.classList.contains('contraste-alto'));
+    };
+    document.getElementById('btn-dark').onclick = function(){
+      document.body.classList.toggle('modo-escuro');
+      this.setAttribute('aria-pressed', document.body.classList.contains('modo-escuro'));
+    };
+  </script>
 </body>
 </html>

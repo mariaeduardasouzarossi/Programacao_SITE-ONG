@@ -1,15 +1,15 @@
 :root {
   --color-primary: #3b28a8;
   --color-primary-light: #1909f3;
-  --color-banner: #8bbfe9;
   --color-bg: #f4f7fa;
   --color-card: #fff;
+  --color-text: #232;
 }
 body {
   margin: 0;
   background: var(--color-bg);
   font-family: Arial, Helvetica, sans-serif;
-  color: #232;
+  color: var(--color-text);
 }
 .topo {
   display: flex;
@@ -26,10 +26,15 @@ body {
   font-weight: bold;
   font-size: 23px;
 }
-.logo { height: 100px; }
+.logo { height: 65px; }
+.logo-banner {
+  max-width: 120px;
+  display: block;
+  margin: 0 auto 18px auto;
+}
 nav a { color: #fff; text-decoration: none; margin: 0 10px; cursor: pointer; }
 .btn-nav {
-  background: var(--color-banner);
+  background: var(--color-bg);
   color: var(--color-primary);
   border-radius: 8px;
   padding: 10px 20px;
@@ -45,7 +50,7 @@ nav a { color: #fff; text-decoration: none; margin: 0 10px; cursor: pointer; }
 .banner-home .banner-btn {
   display: inline-block;
   margin-top: 10px;
-  padding: 12px 28px;
+  padding: 8px 22px;
   border-radius: 8px;
   background: #fff;
   color: #0647b1;
@@ -57,7 +62,7 @@ nav a { color: #fff; text-decoration: none; margin: 0 10px; cursor: pointer; }
 .banner-home .banner-btn:hover { background: #0647b1; color: #fff; }
 .depoimentos-list { display: flex; gap: 32px; justify-content: center; flex-wrap: wrap;}
 .depoimentos blockquote {
-  background: #eee; color: #7a7a99;
+  background: #eee; color: #3b28a8;
   border-left: 4px solid #5f69eb; padding: 18px 20px;
   border-radius: 8px; max-width: 400px;
 }
@@ -86,7 +91,7 @@ nav a { color: #fff; text-decoration: none; margin: 0 10px; cursor: pointer; }
   text-decoration: none;
   transition: background .2s;
 }
-.btn-voluntario:hover { background: var(--color-primary-light);}
+.btn-voluntario:hover { background: var(--color-primary-light); }
 .card-grid { display: flex; gap: 24px; justify-content: center; margin: 40px 0; flex-wrap: wrap;}
 .card-flip {
   perspective: 1000px;
@@ -123,18 +128,91 @@ nav a { color: #fff; text-decoration: none; margin: 0 10px; cursor: pointer; }
   padding: 8px 18px;
   text-decoration: none;
 }
-.cadastro-container { display: flex; justify-content: center; align-items: stretch; gap: 28px; max-width: 1100px; margin: 24px auto; padding: 24px;}
-.cadastro-banner { flex: 1 1 320px; background: linear-gradient(135deg, var(--color-primary) 60%, var(--color-banner)); border-radius: 10px; text-align: center; color: #fff; padding: 32px 16px;}
-.cadastro-form { flex: 2 1 350px; display: flex; flex-direction: column; gap: 12px; background: #fff; padding: 24px; border-radius: 10px; box-shadow: 0 2px 14px #bac1de3b;}
-.cadastro-form input, .cadastro-form textarea { padding: 12px 9px; border: 1.3px solid #cfd8dc; border-radius: 5px; font-size: 1em; outline: none; transition: border .2s;}
-.cadastro-form input:focus, .cadastro-form textarea:focus { border-color: var(--color-primary);}
-.cadastro-form .btn { background: var(--color-primary); color: #fff; font-weight: bold; border: none; padding: 14px; border-radius: 8px; margin-top: 16px;}
-.cadastro-form h3 { margin: 16px 0 6px 0;}
-input.error, textarea.error { border-color: #f00; background-color: #fee;}
-@media (max-width: 970px) { .cadastro-container { flex-direction: column; gap: 14px; align-items: stretch;} }
-@media (max-width: 700px) { .card-list, .card-grid { flex-direction: column; align-items: center; } }
+footer { text-align:center; margin:40px 0 0 0; color:#2f2f2f; font-size:.95em;}
+/* Contraste alto */
+.contraste-alto, .contraste-alto * {
+  background: #000 !important;
+  color: #fff !important;
+  border-color: #fff !important;
+}
+.modo-escuro, .modo-escuro * {
+  background: #1a1a34 !important;
+  color: #fafafa !important;
+}
+a:focus, button:focus, .btn-voluntario:focus, .btn-card:focus { outline: 2px solid #f8b800; }
+/* FORMULÁRIO (adicione do modelo anterior que enviei!) */
+.cadastro-form {
+  flex: 2 1 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #fff;
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 2px 14px #bac1de3b;
+  margin: 0 auto;
+  max-width: 650px;
+}
+.cadastro-form input, .cadastro-form textarea {
+  padding: 12px 9px;
+  border: 1.3px solid #cfd8dc;
+  border-radius: 5px;
+  font-size: 1em;
+  outline: none;
+  transition: border 0.2s;
+  margin-bottom: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.cadastro-form input[type="date"] { color: #232; }
+.cadastro-form .btn {
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  margin-top: 16px;
+  cursor: pointer;
+}
+.cadastro-form h3 { margin: 16px 0 6px 0; }
+input.error, textarea.error { border-color: #f00; background-color: #fee; }
+.cadastro-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 28px;
+  max-width: 1100px;
+  margin: 24px auto;
+  padding: 24px;
+}
+.cadastro-banner {
+  flex: 1 1 320px;
+  background: linear-gradient(135deg, var(--color-primary) 60%, #8bbfe9);
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  padding: 32px 16px;
+}
+@media (max-width: 970px) { .card-list, .card-grid { flex-direction: column; align-items: center;} }
 @media (max-width: 600px) {
   .topo { flex-direction: column; align-items: flex-start; padding: 12px 6px; }
-  .cadastro-banner, .cadastro-form, .banner-home { border-radius: 10px; }
-  .depoimentos-list { flex-direction: column; gap: 16px; }
+  .logo { height: 54px;}
+}
+.logo-banner-grande {
+  max-width: 220px;
+  width: 80%;
+  margin: 0 auto 24px auto;
+  display: block;
+  filter: drop-shadow(0 4px 16px #0003);
+}
+
+@media (max-width:900px) {
+  .logo-banner-grande { max-width: 120px; }
+}
+.cadastro-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
